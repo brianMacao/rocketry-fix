@@ -90,7 +90,7 @@ assumptions of your project structure.
 Install Rocketry from [PyPI](https://pypi.org/project/rocketry/):
 
 ```shell
-pip install rocketry
+pip install rocketry-fix
 ```
 
 
