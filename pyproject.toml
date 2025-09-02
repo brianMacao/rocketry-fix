@@ -6,12 +6,13 @@ build-backend = "setuptools.build_meta"
 packages = ["rocketry"]
 
 [project]
-name = "rocketry"
+name = "rocketry-fix"
 description = "Advanced scheduling framework"
 readme = "README.md"
 license = {file="LICENSE"}
 authors = [
     {name = "Mikael Koli", email = "koli.mikael@gmail.com"},
+    {name = "Brian", email = "brianngia@gmail.com"},
 ]
 requires-python = ">=3.7"
 classifiers = [
@@ -24,6 +25,8 @@ classifiers = [
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
 
     "Topic :: System",
     "Topic :: Software Development",
@@ -47,11 +50,12 @@ write_to = "rocketry/_version.py"
 local_scheme = "no-local-version"
 
 [project.urls]
-Homepage = 'https://github.com/Miksus/rocketry'
+OriginHomepage = 'https://github.com/Miksus/rocketry'
 Documentation = 'https://rocketry.readthedocs.io'
-Funding = 'https://github.com/sponsors/Miksus'
-Source = 'https://github.com/Miksus/rocketry'
-Changelog = 'https://rocketry.readthedocs.io/en/stable/versions.html'
+OriginFunding = 'https://github.com/sponsors/Miksus'
+OriginSource = 'https://github.com/Miksus/rocketry'
+OriginChangelog = 'https://rocketry.readthedocs.io/en/stable/versions.html'
+NewHomepage = 'https://github.com/brianMacao/rocketry-fix'
 
 [project.optional-dependencies]
 test = [
@@ -68,7 +72,7 @@ docs = [
 ]
 
 [tool.coverage.run]
-source = ["rocketry"]
+source = ["rocketry-fix"]
 branch = false
 omit = [
     "test/*",
