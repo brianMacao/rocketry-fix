@@ -1,3 +1,11 @@
+# use v1 to instead of pydantic
+import pydantic as origin_pydantic
+main_pydantic_version, *_ = origin_pydantic.__version__
+import sys
+if main_pydantic_version == "2":
+    from pydantic import v1
+    sys.modules['pydantic'] = v1
+
 from .session import Session
 from .application import Rocketry, Grouper
 from .core import Scheduler
@@ -22,3 +30,6 @@ from .tasks import FuncTask
 _setup_defaults()
 session = Session(config={"execution": "process"})
 session.set_as_default()
+
+# Reset pydantic version to avoid conflicts with calling system
+sys.modules['pydantic'] = origin_pydantic
